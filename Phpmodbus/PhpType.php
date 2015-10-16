@@ -234,13 +234,13 @@ class PhpType {
         // Combine bytes
         if ($endianness == 0)
         {
-            // big endian
+            // little endian
             $value = (($data[3] & 0xFF) << 24) |
                     (($data[2] & 0xFF) << 16) |
                     (($data[1] & 0xFF)) |
                     (($data[0] & 0xFF) << 8);
         } else {
-            // little endian
+            // big endian
             $value = (($data[0] & 0xFF) << 24) |
                     (($data[1] & 0xFF) << 16) |
                     (($data[2] & 0xFF) << 8) |
