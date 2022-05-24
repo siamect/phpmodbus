@@ -34,7 +34,7 @@ class IecType {
      * @return value IEC BYTE data type
      *
      */
-    function iecBYTE($value) {
+    public static function iecBYTE($value) {
         return chr($value & 0xFF);
     }
 
@@ -47,7 +47,7 @@ class IecType {
      * @return value IEC-1131 INT data type
      *
      */
-    function iecINT($value) {
+    public static function iecINT($value) {
         return self::iecBYTE(($value >> 8) & 0x00FF) .
                 self::iecBYTE(($value & 0x00FF));
     }
